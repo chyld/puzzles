@@ -34,5 +34,3 @@ function firstUniqueLetter2(word){
     if(last === first) return letter;
   }
 }
-
-console.log(firstUniqueLetter2('toothbrush'));
