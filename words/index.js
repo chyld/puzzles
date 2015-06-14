@@ -1,4 +1,4 @@
-function firstUniqueLetter(word){
+function firstUniqueLetter1(word){
   var histogram = {};
 
   for(var i = 0; i < word.length; i++){
@@ -26,5 +26,13 @@ function firstUniqueLetter(word){
   }
 }
 
+function firstUniqueLetter2(word){
+  for(var i = 0; i < word.length; i++){
+    var letter = word[i];
+    var first = word.indexOf(letter);
+    var last = word.lastIndexOf(letter);
+    if(last === first) return letter;
+  }
+}
 
-console.log(firstUniqueLetter('toothbrush'));
+console.log(firstUniqueLetter2('toothbrush'));
