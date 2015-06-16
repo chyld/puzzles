@@ -11,12 +11,8 @@ function nato(word){
       "Y": "Yankee", "Z": "Zulu"
     };
 
-    return word.split('').map(function(letter){
-      return letter.toUpperCase()
-    }).map(function(letter){
+    return word.toUpperCase().split('')
+    .map(function(letter){
       return letters[letter];
     }).join(" ");
 }
-
-
-console.log(nato('helloworld'));
